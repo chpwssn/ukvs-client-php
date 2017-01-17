@@ -3,12 +3,12 @@
     "description": "A client for uKVS servers.",
     "type": "library",
     "require": {
-        "php": ">=5.6",
-        "weaverryan/derp-dangerzone": "dev-master"
+        "php": ">=5.6"
     },
     "autoload": {
-        "psr-0": {
-            "UKVS": "src/"
-        }
+        "psr-4": {
+            "": "src/"
+        },
+        "classmap":["src/Client.php"]
     }
 }

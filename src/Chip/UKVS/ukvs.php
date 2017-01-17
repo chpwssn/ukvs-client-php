@@ -1,5 +1,7 @@
 <?php
-class UKVS {
+
+namespace Chip\UKVS;
+class UKVSClient {
 	public $host;
 	public $namespace;
 	public $version;

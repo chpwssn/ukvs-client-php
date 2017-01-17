@@ -1,12 +1,14 @@
 {
     "name": "chip/ukvsclient",
     "description": "A client for uKVS servers.",
+    "type": "library",
     "require": {
-        "php": "^5.6.29 || ^7.0"
+        "php": ">=5.6",
+        "weaverryan/derp-dangerzone": "dev-master"
     },
     "autoload": {
         "psr-0": {
-            "Chip\\UKVS": "src"
+            "UKVS": "src/"
         }
     }
 }

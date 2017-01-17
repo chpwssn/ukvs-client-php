@@ -1,6 +1,6 @@
 <?php
 
-namespace Chip\UKVS;
+namespace UKVS;
 class UKVSClient {
 	public $host;
 	public $namespace;
@@ -34,7 +34,7 @@ class UKVSClient {
 				foreach ($result->{'related'} as $related) {
 					$tmpObj = new UKVSObject(null);
 					$tmpObj->obj = $related->{'obj'};
-					$tmpObj->time = new DateTime();
+					$tmpObj->time = new \DateTime();
 					$tmpObj->time->SetTimestamp($related->{'time'});
 					$obj->related[] = $tmpObj;
 				}
@@ -42,7 +42,7 @@ class UKVSClient {
 			} else {
 				$obj = new UKVSObject($result->{'_id'});
 				$obj->obj = $result->{'obj'};
-				$obj->time = new DateTime();
+				$obj->time = new \DateTime();
 				$obj->time->SetTimestamp($result->{'time'});
 				return $obj;
 			}
